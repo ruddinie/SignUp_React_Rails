@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, Jumbotron } from 'react-bootstrap'
 import { Container }  from './styles.js'
-
+import 'animate.css';
   
 function Signup() {
     const [data, setData] = useState({
@@ -10,9 +10,8 @@ function Signup() {
     })
 
     return (
-        <Jumbotron>
             <Container>
-                <div className="form">
+                <div className="form animate__animated animate__bounceIn">
                     <h3>Cadastre-se</h3>
                     <br />
                     <Form>
@@ -33,7 +32,6 @@ function Signup() {
                     </Form>
                 </div>
             </Container>
-        </Jumbotron>
     );
 }
 
