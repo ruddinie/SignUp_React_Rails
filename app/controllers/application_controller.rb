@@ -1,8 +1,14 @@
 class ApplicationController < ActionController::API
     respond_to :json
+    protect_from_forgery with: :exception
 
     before_action :configure_permitted_parameters, if: :devise_controller?
 
+    def fallback_index_html
+      render :file => 'public/index.html'
+    end
+
+    
      protected
 
           def configure_permitted_parameters
