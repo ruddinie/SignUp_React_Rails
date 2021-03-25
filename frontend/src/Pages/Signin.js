@@ -3,7 +3,6 @@ import { Button, Form } from 'react-bootstrap'
 import { Container }  from './styles.js'
 import 'animate.css';
 import authenticate from '../services/authenticate'  
-import  login_handler from "../services/login_handler";
 
 function Signin({history}) {
     window.document.title = "Login"
@@ -18,8 +17,8 @@ function Signin({history}) {
         let auth = await authenticate({
             signup: false,
             data,
+            history,
         });
-        login_handler(auth, history);
     }
 
     return (
