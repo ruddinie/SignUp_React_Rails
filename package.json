@@ -1,0 +1,30 @@
+{
+    "dependencies": {
+      "react-toastify": "^5.3.2"
+    },
+    "name": "signup-react-rails-mongo",
+    "description": "",
+    "version": "1.0.0",
+    "main": "index.js",
+    "directories": {
+      "lib": "lib",
+      "test": "test"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "cd frontend && npm install && npm run build && cd ..",
+      "deploy": "cp -a frontend/build/. public/",
+      "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/samuelegea/SignUp_React_Rails.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/samuelegea/SignUp_React_Rails/issues"
+    },
+    "homepage": "https://github.com/samuelegea/SignUp_React_Rails#readme"
+  }
