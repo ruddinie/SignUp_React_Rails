@@ -93,8 +93,11 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
-    mimemagic (0.3.5)
+    mimemagic (0.3.9)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
+    mini_portile2 (2.5.0)
     minitest (5.14.4)
     mongo (2.14.0)
       bson (>= 4.8.2, < 5.0.0)
@@ -103,7 +106,8 @@ GEM
       mongo (>= 2.7.0, < 3.0.0)
     msgpack (1.4.2)
     nio4r (2.5.7)
-    nokogiri (1.11.2-x86_64-linux)
+    nokogiri (1.11.2)
+      mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     puma (5.2.2)
@@ -167,7 +171,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
@@ -183,9 +187,10 @@ DEPENDENCIES
   redis (~> 4.0)
   spring
   tzinfo-data
+  wdm
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 2.7.0p0
 
 BUNDLED WITH
-   2.2.15
+   2.1.2
