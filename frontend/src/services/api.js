@@ -2,7 +2,7 @@
 import axios from 'axios'
 import logout from './logout'
 const api = axios.create({
-    baseURL: 'http://localhost:3001',
+    baseURL: "http://" + window.location.hostname + ':3001',
     headers: { 
             "Content-Type":"application/json",
             "Accept":"application/json"
