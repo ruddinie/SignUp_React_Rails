@@ -2,7 +2,7 @@
 import axios from 'axios'
 import logout from './logout'
 const api = axios.create({
-    baseURL: "http://" + window.location.hostname + ':3001',
+    baseURL: (process.env.NODE_ENV === 'development') ? 'http://localhost:3001/api' : 'https://' + window.location.hostname + '/api',
     headers: { 
             "Content-Type":"application/json",
             "Accept":"application/json"
